@@ -80,6 +80,8 @@ header h1 {
 .formulario .campo {
   display: grid;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .formulario label {
@@ -238,6 +240,7 @@ main {
 
 .filtros .campo {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 }
@@ -253,6 +256,7 @@ main {
   border-radius: 1rem;
   text-align: center;
   background-color: var(--gris-claro);
+  margin-left: 16px;
 }
 
 .listado-gastos {
@@ -411,4 +415,28 @@ body .modal {
   box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
   margin-bottom: 16px;
   overflow: hidden;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 500px) {
+  header h1,
+  .formulario label,
+  .reset-app,
+  .contenido-presupuesto p,
+  .listado-gastos h2,
+  .filtros label,
+  .filtros select {
+    font-size: 110%;
+  }
+  .gasto,
+  .descripcion-gasto,
+  .cantidad-gasto,
+  .descripcion-gasto .categoria,
+  .descripcion-gasto .nombre-gasto,
+  .descripcion-gasto .fecha-gasto {
+    font-size: 100%;
+  }
+  .contenido-gasto img {
+    width: 8rem;
+  }
 }

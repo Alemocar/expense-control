@@ -44,9 +44,6 @@ const BudgetControl = ({
 
   const handleResetApp = () => {
     const result = confirm("Reiniciar Gastos y Presupuesto")
-
-    console.log(result)
-
     if (result) {
       setExpenses([])
       setBudget(0)
